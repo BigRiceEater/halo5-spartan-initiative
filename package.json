@@ -1,0 +1,25 @@
+{
+  "name": "halo5-spartan-initiative",
+  "version": "1.0.0",
+  "description": "Configure and build your ultimate Spartan loadout with every weapon and ability in the Halo 5 game.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongoose",
+    "api",
+    "halo",
+    "spartan"
+  ],
+  "author": "Big.Rice.Eater",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4",
+    "uuid": "^3.3.2"
+  }
+}
