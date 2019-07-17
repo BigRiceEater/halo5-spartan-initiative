@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Signup root url');
+router.post('/', (req, res) => {
+  const { username, email, password } = req.body;
+  res.json({ username, email, password });
 });
 
 module.exports = router;
