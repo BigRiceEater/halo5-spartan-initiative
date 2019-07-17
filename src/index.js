@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const startup = require('./startup');
+startup();
+
 app.use(express.json());
 
 const api = require('./routes');
