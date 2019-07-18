@@ -11,10 +11,13 @@ router.post('/', (req, res) => {
     password
   });
   user.save(err => {
-    console.log(err, user);
-    res.status(400);
+    if (err) {
+      console.log(err, user);
+      res.status(400).end();
+    } else {
+      res.status(200).end();
+    }
   });
-  res.status(200);
 });
 
 module.exports = router;
