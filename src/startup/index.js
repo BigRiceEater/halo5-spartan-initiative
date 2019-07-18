@@ -3,9 +3,9 @@ const dbStartup = require('./database');
 module.exports = function() {
   dbStartup(
     {
-      dbUser: 'root',
-      dbPass: 'theworldisanoyster',
-      mongoUrl: 'mongodb://localhost:27017/cart'
+      dbUser: process.env.MONGO_USER,
+      dbPass: process.env.MONGO_PWD,
+      mongoUrl: process.env.MONGO_URL
     },
     () => console.info('Mongo connection okay'),
     () => console.error('No Mongo connection')
