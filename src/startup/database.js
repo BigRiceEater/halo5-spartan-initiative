@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+// Removes (node:5604) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+mongoose.set('useCreateIndex', true);
+
 module.exports = function({ dbUser, dbPass, mongoUrl }, success, failure) {
   mongoose.Promise = global.Promise;
 
