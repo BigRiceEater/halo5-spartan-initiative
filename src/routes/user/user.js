@@ -1,11 +1,25 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  username: {
+  // Keep the format that was used to enter the name
+  displayname: {
     type: String,
     required: true,
     unique: true,
-    index: true
+    trim: true
+  },
+  // all lower-case to check for uniqueness.
+  username: {
+    type: String,
+    required: true,
+    trim: true,
+    lowercase: true,
+    validate: {
+      validator: username => {
+        User.findOne(username, (err, doc) => doc);
+      },
+      message: 'username already exists'
+    }
   },
   password: {
     type: String,
