@@ -28,3 +28,11 @@ docker-compose up
 If you prefer to use your system installed mongo or you only have Windows 10 Home that doesn't support Docker because Microsoft decided not to include _hyper-v_ for normal users, specify your existing username and password along with the url to mongo in the `.env` will suffice.
 
 > **Note** If you are attempting to run docker on Windows 10, please make sure your edition is either _Pro_ or _Enterprise_ because docker needs hyper-v to execute which isn't included in the Home edition. Linux and Mac are fine.
+
+## Testing API 
+
+The */test* folder contains a number of http files illustrating what the API routes expect. Visual Studio Code developers can use to try the API. It requires the [Rest Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension to be installed. 
+
+Alternatively you can write your own Postman scripts to play around and test how the API works.
+
+A swagger specification will be created later for better manual testing without relying on development tools. And it will allow the auto-generation of the rest client for various projects like Xamarin.
