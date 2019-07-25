@@ -1,17 +1,6 @@
 const mongoose = require('mongoose');
 
 const weaponSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String
-  },
-  faction: {
-    type: String,
-    enum: ['Convenant', 'UNSC', 'Prometheans']
-  },
   damage: {
     type: String,
     required: true
@@ -36,6 +25,7 @@ const weaponSchema = new mongoose.Schema({
   }
 });
 
-const Weapon = mongoose.model('Weapon', weaponSchema);
+const Unit = require('./unit');
+const Weapon = Unit.discriminator('Weapon', weaponSchema);
 
 module.exports = Weapon;
