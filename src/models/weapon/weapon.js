@@ -12,7 +12,7 @@ const weaponSchema = new mongoose.Schema({
   }
 });
 
-const Unit = require('./unit');
+const Unit = require('../unit');
 const Weapon = Unit.discriminator('Weapon', weaponSchema);
 
 module.exports = Weapon;
