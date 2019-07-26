@@ -20,6 +20,7 @@ const vehicleSchema = new Schema({
   ]
 });
 
+const Unit = require('./unit');
 const Vehicle = Unit.discriminator('Vehicle', vehicleSchema);
 
 module.exports = Vehicle;
