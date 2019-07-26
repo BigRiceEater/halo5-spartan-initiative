@@ -11,7 +11,7 @@ const unitSchema = new mongoose.Schema({
   faction: {
     type: String,
     required: true,
-    enum: ['Convenant', 'UNSC', 'Prometheans']
+    enum: ['Convenant', 'UNSC', 'Promethean']
   }
 });
 
