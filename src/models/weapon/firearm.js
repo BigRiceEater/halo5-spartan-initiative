@@ -33,6 +33,20 @@ const firearmSchema = new Schema({
     type: Number,
     required: true,
     min: 0
+  },
+  zoom: {
+    canZoom: {
+      type: Boolean,
+      default: false
+    },
+    zoomLevels: [
+      {
+        level: {
+          type: String,
+          enum: ['2x', '6x', '12x']
+        }
+      }
+    ]
   }
 });
 
