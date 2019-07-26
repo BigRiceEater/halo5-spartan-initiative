@@ -5,9 +5,7 @@ const unitSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  description: {
-    type: String
-  },
+  description: String,
   faction: {
     type: String,
     required: true,
